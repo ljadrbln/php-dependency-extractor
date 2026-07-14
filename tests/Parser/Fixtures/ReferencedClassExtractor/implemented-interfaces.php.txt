@@ -1,0 +1,8 @@
+<?php
+
+namespace App\User;
+
+use App\Shared\LoggerAwareInterface;
+use App\Shared\ServiceInterface;
+
+final class UserService implements LoggerAwareInterface, ServiceInterface {}

@@ -1,0 +1,9 @@
+<?php
+
+namespace App\User;
+
+use App\Shared\Clock;
+use App\Shared\Logger;
+use App\User\UserRepositoryInterface;
+
+final class UserService {}
