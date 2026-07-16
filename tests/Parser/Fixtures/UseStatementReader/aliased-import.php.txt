@@ -1,0 +1,9 @@
+<?php
+
+namespace App\User;
+
+use App\Infrastructure\UserRepository as Repository;
+
+final class Example
+{
+}

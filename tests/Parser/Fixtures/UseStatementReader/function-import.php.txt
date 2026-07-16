@@ -1,0 +1,9 @@
+<?php
+
+namespace App\User;
+
+use function App\Shared\create_user;
+
+final class Example
+{
+}

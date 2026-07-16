@@ -1,0 +1,9 @@
+<?php
+
+namespace App\User;
+
+use const App\Shared\DEFAULT_USER_LIMIT;
+
+final class Example
+{
+}
