@@ -1,0 +1,17 @@
+<?php
+
+namespace App\User;
+
+final class UserService extends AbstractService implements LoggerAwareInterface, ServiceInterface
+{
+    private const CLOCK = Clock::class;
+
+    public function execute(): void
+    {
+        new Clock();
+
+        try {
+        } catch (DomainException $exception) {
+        }
+    }
+}

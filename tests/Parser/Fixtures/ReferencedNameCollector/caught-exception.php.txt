@@ -1,0 +1,13 @@
+<?php
+
+namespace App\User;
+
+final class UserService
+{
+    public function execute(): void
+    {
+        try {
+        } catch (DomainException $exception) {
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<?php
+
+namespace App\User;
+
+final class UserService
+{
+    private const CLOCK = Clock::class;
+
+    public function execute(): void
+    {
+        new Clock();
+    }
+}
