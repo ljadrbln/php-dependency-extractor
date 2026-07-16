@@ -5,13 +5,17 @@ declare(strict_types=1);
 /*
  * This file is part of the PHP Dependency Extractor project.
  *
- * Copyright (c) 2026 Pavel Konovalov
+ * Copyright (c) 2026 Pavel K
  * Licensed under the MIT License.
  */
 
 namespace PhpDependencyExtractor\Tests\Parser;
 
+use PhpDependencyExtractor\Parser\ClassNameResolver;
+use PhpDependencyExtractor\Parser\NamespaceReader;
 use PhpDependencyExtractor\Parser\ReferencedClassExtractor;
+use PhpDependencyExtractor\Parser\ReferencedNameCollector;
+use PhpDependencyExtractor\Parser\UseStatementReader;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
@@ -34,7 +38,17 @@ final class ReferencedClassExtractorTest extends TestCase
 
         self::assertNotFalse($phpCode);
 
-        $extractor = new ReferencedClassExtractor();
+        $namespaceReader = new NamespaceReader();
+        $useStatementReader = new UseStatementReader();
+        $referencedNameCollector = new ReferencedNameCollector();
+        $classNameResolver = new ClassNameResolver();
+
+        $extractor = new ReferencedClassExtractor(
+            $namespaceReader,
+            $useStatementReader,
+            $referencedNameCollector,
+            $classNameResolver
+        );
 
         $actualClasses = $extractor->extract($phpCode);
 
