@@ -5,19 +5,16 @@ declare(strict_types=1);
 /*
  * This file is part of the PHP Dependency Extractor project.
  *
- * Copyright (c) 2026 Pavel Konovalov
+ * Copyright (c) 2026 Pavel K
  * Licensed under the MIT License.
  */
 
 namespace PhpDependencyExtractor\Parser;
 
 /**
- * Extracts referenced PHP classes from PHP source code.
- *
- * The extractor parses PHP tokens and returns fully qualified class names
- * referenced by imports, inheritance, object creation, exception handling,
- * and static class references.
+ * Extracts referenced classes from a PHP source file.
  */
+
 final class ReferencedClassExtractor
 {
     /**
