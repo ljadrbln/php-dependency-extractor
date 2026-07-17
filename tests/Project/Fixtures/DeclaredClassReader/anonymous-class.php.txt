@@ -1,0 +1,10 @@
+<?php
+
+namespace App\User;
+
+$service = new class {
+};
+
+final class UserService
+{
+}

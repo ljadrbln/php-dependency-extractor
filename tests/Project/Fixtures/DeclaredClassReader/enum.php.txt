@@ -1,0 +1,9 @@
+<?php
+
+namespace App\User;
+
+enum UserStatus
+{
+    case Active;
+    case Disabled;
+}
