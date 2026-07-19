@@ -11,10 +11,12 @@ declare(strict_types=1);
 
 namespace PhpDependencyExtractor\Parser;
 
+use PhpDependencyExtractor\Parser\Contract\ReferencedClassExtractorInterface;
+
 /**
  * Extracts referenced classes from a PHP source file.
  */
-final class ReferencedClassExtractor
+final class ReferencedClassExtractor implements ReferencedClassExtractorInterface
 {
     public function __construct(
         private readonly NamespaceReader $namespaceReader,
